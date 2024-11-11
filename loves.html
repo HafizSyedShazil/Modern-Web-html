@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+    <style>
+        /* Global Reset and Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(45deg, #ff99cc, #ff66b2, #ff3399);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Heart Animation */
+        .heart {
+            color: red;
+            font-size: 70px;
+            animation: heart-beat 1.5s infinite;
+        }
+
+        @keyframes heart-beat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 80px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 24px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 20px auto;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Button Styling */
+        .button {
+            padding: 15px 30px;
+            background-color: #ff3366;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff1a66;
+        }
+
+        /* Hidden New Message */
+        .new-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 30px;
+            color: #ffffff;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .show {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>"Happy Wife Day" (Mera Bacha) 👀</h1>
+        <p>From the moment we met, my heart has belonged to you. <span class="heart">❤️</span> Every day with you feels like a beautiful dream come true.</p>
+        <button class="button" id="loveButton">Touch Me</button>
+        <p id="newMessage" class="new-message">I love you Jaweria Meri Jaan 💋😚❤️</p>
+    </div>
+
+    <script>
+        // JavaScript to handle the button click event
+        const loveButton = document.getElementById('loveButton');
+        const newMessage = document.getElementById('newMessage');
+
+        loveButton.addEventListener('click', function() {
+            // Show a new message with animation
+            newMessage.classList.add('show');
+            
+            // Change the button text after click
+            loveButton.textContent = "You're My Everything!";
+
+            // Optional: Add a heart beat effect to the new message
+            newMessage.classList.add('heart');
+        });
+    </script>
+</body>
+</html>
